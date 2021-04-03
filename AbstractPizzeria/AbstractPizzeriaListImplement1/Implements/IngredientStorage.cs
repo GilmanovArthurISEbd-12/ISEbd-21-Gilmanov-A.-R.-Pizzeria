@@ -5,7 +5,6 @@ using AbstractPizzeriaListImplement.Models;
 using System;
 using System.Collections.Generic;
 
-
 namespace AbstractPizzeriaListImplement.Implements
 {
     public class IngredientStorage : IIngredientStorage

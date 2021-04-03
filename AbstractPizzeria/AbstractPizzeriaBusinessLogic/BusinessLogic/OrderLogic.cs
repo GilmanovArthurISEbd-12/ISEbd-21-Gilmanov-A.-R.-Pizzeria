@@ -14,7 +14,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
         {
             _orderStorage = orderStorage;
         }
-
         public List<OrderViewModel> Read(OrderBindingModel model)
         {
             if (model == null)

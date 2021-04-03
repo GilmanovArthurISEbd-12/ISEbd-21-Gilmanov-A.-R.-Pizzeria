@@ -9,7 +9,6 @@ using AbstractPizzeriaListImplement.Models;
 
 namespace AbstractPizzeriaListImplement.Implements
 {
-
     public class OrderStorage : IOrderStorage
     {
         private readonly DataListSingleton source;
@@ -90,7 +89,7 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             if (tempOrder == null)
             {
-                throw new Exception("Элемент не найден");
+                throw new Exception("Element did not find");
             }
             CreateModel(model, tempOrder);
         }
@@ -105,7 +104,7 @@ namespace AbstractPizzeriaListImplement.Implements
                     return;
                 }
             }
-            throw new Exception("Элемент не найден");
+            throw new Exception("Element did not find");
         }
 
         private Order CreateModel(OrderBindingModel model, Order order)
@@ -130,7 +129,7 @@ namespace AbstractPizzeriaListImplement.Implements
                 DateCreate = order.DateCreate,
                 DateImplement = order.DateImplement,
                 PizzaId = order.PizzaId,
-                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId).PizzaName
+                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId)?.PizzaName
             };
         }
     }

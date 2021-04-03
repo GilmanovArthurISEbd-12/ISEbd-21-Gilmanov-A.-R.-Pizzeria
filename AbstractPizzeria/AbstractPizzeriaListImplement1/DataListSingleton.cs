@@ -15,7 +15,6 @@ namespace AbstractPizzeriaListImplement
             Orders = new List<Order>();
             Pizzas = new List<Pizza>();
         }
-
         public static DataListSingleton GetInstance()
         {
             if (instance == null)
@@ -23,6 +22,6 @@ namespace AbstractPizzeriaListImplement
                 instance = new DataListSingleton();
             }
             return instance;
-        }
+        }
     }
 }

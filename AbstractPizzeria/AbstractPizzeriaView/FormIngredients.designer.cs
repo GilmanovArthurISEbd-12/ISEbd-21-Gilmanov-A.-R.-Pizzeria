@@ -85,7 +85,7 @@
             this.dataGridViewIng.Size = new System.Drawing.Size(364, 443);
             this.dataGridViewIng.TabIndex = 5;
             // 
-            // Ingredients
+            // FormIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,8 +95,9 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonChange);
             this.Controls.Add(this.buttonAdd);
-            this.Name = "Ingredients";
+            this.Name = "FormIngredients";
             this.Text = "Ingredients";
+            this.Load += new System.EventHandler(this.FormIngredients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIng)).EndInit();
             this.ResumeLayout(false);
 

@@ -61,17 +61,14 @@ namespace AbstractPizzeriaView
                 }
             }
         }
-
         private void TextBoxQuantity_TextChanged(object sender, EventArgs e)
         {
             CalcSum();
         }
-
         private void ComboBoxPizza_SelectedIndexChanged(object sender, EventArgs e)
         {
             CalcSum();
         }
-
         private void ButtonSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBoxQuantity.Text))
@@ -105,7 +102,6 @@ namespace AbstractPizzeriaView
                MessageBoxIcon.Error);
             }
         }
-
         private void ButtonCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;

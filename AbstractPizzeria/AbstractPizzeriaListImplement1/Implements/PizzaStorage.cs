@@ -16,7 +16,6 @@ namespace AbstractPizzeriaListImplement.Implements
         {
             source = DataListSingleton.GetInstance();
         }
-
         public List<PizzaViewModel> GetFullList()
         {
             List<PizzaViewModel> result = new List<PizzaViewModel>();
@@ -26,7 +25,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             return result;
         }
-
         public List<PizzaViewModel> GetFilteredList(PizzaBindingModel model)
         {
             if (model == null)
@@ -43,7 +41,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             return result;
         }
-
         public PizzaViewModel GetElement(PizzaBindingModel model)
         {
             if (model == null)
@@ -60,7 +57,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             return null;
         }
-
         public void Insert(PizzaBindingModel model)
         {
             Pizza tempPizza = new Pizza
@@ -78,7 +74,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             source.Pizzas.Add(CreateModel(model, tempPizza));
         }
-
         public void Update(PizzaBindingModel model)
         {
             Pizza tempPizza = null;
@@ -95,7 +90,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             CreateModel(model, tempPizza);
         }
-
         public void Delete(PizzaBindingModel model)
         {
             for (int i = 0; i < source.Pizzas.Count; ++i)
@@ -108,7 +102,6 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             throw new Exception("Element did not find");
         }
-
         private Pizza CreateModel(PizzaBindingModel model, Pizza pizza)
         {
             pizza.PizzaName = model.PizzaName;
