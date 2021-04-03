@@ -16,12 +16,10 @@ namespace AbstractPizzeriaView
             InitializeComponent();
             this._orderLogic = orderLogic;
         }
-
         private void FormMain_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
         private void LoadData()
         {
             try
@@ -46,7 +44,6 @@ namespace AbstractPizzeriaView
             form.ShowDialog();
             LoadData();
         }
-
         private void buttonSubForExec_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
@@ -68,7 +65,6 @@ namespace AbstractPizzeriaView
                 }
             }
         }
-
         private void ButtonOrderReady_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
@@ -89,7 +85,6 @@ namespace AbstractPizzeriaView
                 }
             }
         }
-
         private void ButtonOrderPaid_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 1)
@@ -107,7 +102,6 @@ namespace AbstractPizzeriaView
                 }
             }
         }
-
         private void ButtonUpd_Click(object sender, EventArgs e)
         {
             LoadData();

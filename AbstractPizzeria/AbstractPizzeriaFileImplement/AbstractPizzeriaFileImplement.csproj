@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractPizzeriaBusinessLogic\AbstractPizzeriaBusinessLogic.csproj" />
+    <ProjectReference Include="..\AbstractPizzeriaBusinessLogic\AbstractPizzeriaBusinessLogic.csproj" />
+    <ProjectReference Include="..\AbstractPizzeriaListImplement1\AbstractPizzeriaListImplement.csproj" />
+  </ItemGroup>
+
+</Project>
+

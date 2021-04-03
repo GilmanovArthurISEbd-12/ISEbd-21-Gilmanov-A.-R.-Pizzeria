@@ -144,13 +144,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AbstractShopBusinessLogic\AbstractPizzeriaBusinessLogic.csproj">
-      <Project>{7e11a5be-4de8-460a-af41-8bc1e3100b0a}</Project>
+    <ProjectReference Include="..\AbstractPizzeriaBusinessLogic\AbstractPizzeriaBusinessLogic.csproj">
+      <Project>{bf429c24-bb5a-45ea-85c8-6f9c8a1dafdd}</Project>
       <Name>AbstractPizzeriaBusinessLogic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\AbstractShopListImplement\AbstractPizzeriaListImplement.csproj">
-      <Project>{5fa41108-e9d2-4d4a-8a02-06600cc93d14}</Project>
-      <Name>AbstractPizzeriaListImplement</Name>
+    <ProjectReference Include="..\AbstractPizzeriaFileImplement\AbstractPizzeriaFileImplement.csproj">
+      <Project>{9459b1c0-d5b0-45a1-88e2-1c1836b79f67}</Project>
+      <Name>AbstractPizzeriaFileImplement</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

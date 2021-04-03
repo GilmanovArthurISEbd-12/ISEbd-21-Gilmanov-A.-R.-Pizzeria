@@ -81,6 +81,7 @@
             this.Controls.Add(this.labelNameIngredient);
             this.Name = "FormIngredient";
             this.Text = "Ingredient";
+            this.Load += new System.EventHandler(this.FormIngredient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

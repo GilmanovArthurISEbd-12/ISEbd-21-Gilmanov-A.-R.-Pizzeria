@@ -17,12 +17,10 @@ namespace AbstractPizzeriaView
             InitializeComponent();
             this.logic = logic;
         }
-
         private void FormListPizza_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-
         private void LoadData()
         {
             try
@@ -46,7 +44,6 @@ namespace AbstractPizzeriaView
                MessageBoxIcon.Error);
             }
         }
-
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
             var form = Container.Resolve<FormPizza>();
@@ -55,12 +52,10 @@ namespace AbstractPizzeriaView
                 LoadData();
             }
         }
-
         private void ButtonUpdate_Click(object sender, EventArgs e)
         {
             LoadData();
         }
-
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridViewIng.SelectedRows.Count == 1)

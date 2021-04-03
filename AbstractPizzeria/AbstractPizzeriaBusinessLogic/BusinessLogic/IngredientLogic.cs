@@ -13,6 +13,7 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
         {
             _ingredientStorage = ingredientStorage;
         }
+
         public List<IngredientViewModel> Read(IngredientBindingModel model)
         {
             if (model == null)
@@ -26,6 +27,7 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
             }
             return _ingredientStorage.GetFilteredList(model);
         }
+
         public void CreateOrUpdate(IngredientBindingModel model)
         {
             var element = _ingredientStorage.GetElement(new IngredientBindingModel
@@ -34,7 +36,7 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
             });
             if (element != null && element.Id != model.Id)
             {
-                throw new Exception("there is already ingredient with dat name");
+                throw new Exception("there is already an ingredient with dat name");
             }
             if (model.Id.HasValue)
             {
@@ -45,6 +47,7 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
                 _ingredientStorage.Insert(model);
             }
         }
+
         public void Delete(IngredientBindingModel model)
 
         {
