@@ -56,7 +56,7 @@ namespace AbstractPizzeriaFileImplement.Implements
             var element = source.Orders.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
-                throw new Exception("Order did not found");
+                throw new Exception("Orders did not find");
             }
             CreateModel(model, element);
         }
@@ -70,7 +70,7 @@ namespace AbstractPizzeriaFileImplement.Implements
             }
             else
             {
-                throw new Exception("Element did not found");
+                throw new Exception("Orders did not find");
             }
         }
 
@@ -96,7 +96,7 @@ namespace AbstractPizzeriaFileImplement.Implements
                 DateCreate = order.DateCreate,
                 DateImplement = order.DateImplement,
                 PizzaId = order.PizzaId,
-                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId)?.PizzaName
+                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId).PizzaName
             };
         }
     }

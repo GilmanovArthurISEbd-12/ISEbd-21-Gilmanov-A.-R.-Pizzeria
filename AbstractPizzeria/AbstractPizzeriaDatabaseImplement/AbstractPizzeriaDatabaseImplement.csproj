@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AbstractPizzeriaDatabase.cs\**" />
+    <EmbeddedResource Remove="AbstractPizzeriaDatabase.cs\**" />
+    <None Remove="AbstractPizzeriaDatabase.cs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractPizzeriaBusinessLogic\AbstractPizzeriaBusinessLogic.csproj" />
+    <ProjectReference Include="..\AbstractPizzeriaFileImplement\AbstractPizzeriaFileImplement.csproj" />
+    <ProjectReference Include="..\AbstractPizzeriaListImplement1\AbstractPizzeriaListImplement.csproj" />
+  </ItemGroup>
+
+</Project>

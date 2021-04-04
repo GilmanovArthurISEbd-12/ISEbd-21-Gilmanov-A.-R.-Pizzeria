@@ -16,14 +16,12 @@ namespace AbstractPizzeriaFileImplement.Implements
         {
             source = FileDataListSingleton.GetInstance();
         }
-
         public List<IngredientViewModel> GetFullList()
         {
             return source.Ingredients
             .Select(CreateModel)
            .ToList();
         }
-
         public List<IngredientViewModel> GetFilteredList(IngredientBindingModel model)
         {
             if (model == null)
@@ -35,7 +33,6 @@ namespace AbstractPizzeriaFileImplement.Implements
            .Select(CreateModel)
             .ToList();
         }
-
         public IngredientViewModel GetElement(IngredientBindingModel model)
         {
             if (model == null)
@@ -47,7 +44,6 @@ namespace AbstractPizzeriaFileImplement.Implements
            rec.Id == model.Id);
             return ingredient != null ? CreateModel(ingredient) : null;
         }
-
         public void Insert(IngredientBindingModel model)
         {
             int maxId = source.Ingredients.Count > 0 ? source.Ingredients.Max(rec =>
@@ -55,17 +51,15 @@ namespace AbstractPizzeriaFileImplement.Implements
             var element = new Ingredient { Id = maxId + 1 };
             source.Ingredients.Add(CreateModel(model, element));
         }
-
         public void Update(IngredientBindingModel model)
         {
             var element = source.Ingredients.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
-                throw new Exception("Element did not found");
+                throw new Exception("Ingredients did not find");
             }
             CreateModel(model, element);
         }
-
         public void Delete(IngredientBindingModel model)
         {
             Ingredient element = source.Ingredients.FirstOrDefault(rec => rec.Id ==
@@ -76,16 +70,14 @@ namespace AbstractPizzeriaFileImplement.Implements
             }
             else
             {
-                throw new Exception("Element did not found");
+                throw new Exception("Ingredients did not find");
             }
         }
-
         private Ingredient CreateModel(IngredientBindingModel model, Ingredient ingredient)
         {
             ingredient.IngredientName = model.IngredientName;
             return ingredient;
         }
-
         private IngredientViewModel CreateModel(Ingredient ingredient)
         {
             return new IngredientViewModel
@@ -95,4 +87,5 @@ namespace AbstractPizzeriaFileImplement.Implements
             };
         }
     }
-}
+}
+

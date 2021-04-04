@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractPizzeriaFileImpleme
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractPizzeriaBusinessLogic", "AbstractPizzeriaBusinessLogic\AbstractPizzeriaBusinessLogic.csproj", "{BF429C24-BB5A-45EA-85C8-6F9C8A1DAFDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractPizzeriaListImplement", "AbstractPizzeriaListImplement1\AbstractPizzeriaListImplement.csproj", "{B3224FA8-56AF-4A7E-BE59-9ADE163CAFA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractPizzeriaListImplement", "AbstractPizzeriaListImplement1\AbstractPizzeriaListImplement.csproj", "{B3224FA8-56AF-4A7E-BE59-9ADE163CAFA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractPizzeriaDatabaseImplement", "AbstractPizzeriaDatabaseImplement\AbstractPizzeriaDatabaseImplement.csproj", "{B27D6A0F-BD13-446A-A834-FE7733EA1A52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B3224FA8-56AF-4A7E-BE59-9ADE163CAFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3224FA8-56AF-4A7E-BE59-9ADE163CAFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3224FA8-56AF-4A7E-BE59-9ADE163CAFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27D6A0F-BD13-446A-A834-FE7733EA1A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27D6A0F-BD13-446A-A834-FE7733EA1A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27D6A0F-BD13-446A-A834-FE7733EA1A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27D6A0F-BD13-446A-A834-FE7733EA1A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

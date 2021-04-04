@@ -129,7 +129,7 @@ namespace AbstractPizzeriaListImplement.Implements
                 DateCreate = order.DateCreate,
                 DateImplement = order.DateImplement,
                 PizzaId = order.PizzaId,
-                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId)?.PizzaName
+                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId).PizzaName
             };
         }
     }
