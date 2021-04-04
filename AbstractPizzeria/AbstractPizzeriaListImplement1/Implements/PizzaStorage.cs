@@ -86,7 +86,7 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             if (tempPizza == null)
             {
-                throw new Exception("Элемент не найден");
+                throw new Exception("Element did not find");
             }
             CreateModel(model, tempPizza);
         }
@@ -100,7 +100,7 @@ namespace AbstractPizzeriaListImplement.Implements
                     return;
                 }
             }
-            throw new Exception("Элемент не найден");
+            throw new Exception("Element did not find");
         }
         private Pizza CreateModel(PizzaBindingModel model, Pizza pizza)
         {
