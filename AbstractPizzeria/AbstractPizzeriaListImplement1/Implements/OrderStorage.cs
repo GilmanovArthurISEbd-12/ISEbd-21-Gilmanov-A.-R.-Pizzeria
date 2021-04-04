@@ -89,7 +89,7 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             if (tempOrder == null)
             {
-                throw new Exception("Element did not find");
+                throw new Exception("Элемент не найден");
             }
             CreateModel(model, tempOrder);
         }
@@ -104,7 +104,7 @@ namespace AbstractPizzeriaListImplement.Implements
                     return;
                 }
             }
-            throw new Exception("Element did not find");
+            throw new Exception("Элемент не найден");
         }
 
         private Order CreateModel(OrderBindingModel model, Order order)
@@ -129,7 +129,7 @@ namespace AbstractPizzeriaListImplement.Implements
                 DateCreate = order.DateCreate,
                 DateImplement = order.DateImplement,
                 PizzaId = order.PizzaId,
-                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId)?.PizzaName
+                PizzaName = source.Pizzas.FirstOrDefault(a => a.Id == order.PizzaId).PizzaName
             };
         }
     }

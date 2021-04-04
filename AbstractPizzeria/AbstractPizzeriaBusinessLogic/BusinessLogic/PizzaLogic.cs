@@ -14,7 +14,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
         {
             _pizzaStorage = pizzaStorage;
         }
-
         public List<PizzaViewModel> Read(PizzaBindingModel model)
         {
             if (model == null)
@@ -27,7 +26,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
             }
             return _pizzaStorage.GetFilteredList(model);
         }
-
         public void CreateOrUpdate(PizzaBindingModel model)
         {
             var ingredient = _pizzaStorage.GetElement(new PizzaBindingModel { PizzaName = model.PizzaName });
@@ -44,7 +42,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
                 _pizzaStorage.Insert(model);
             }
         }
-
         public void Delete(PizzaBindingModel model)
         {
             var element = _pizzaStorage.GetElement(new PizzaBindingModel { Id = model.Id });

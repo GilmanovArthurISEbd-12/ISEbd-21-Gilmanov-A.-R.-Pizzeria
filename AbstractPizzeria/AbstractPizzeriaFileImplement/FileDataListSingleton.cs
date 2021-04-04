@@ -110,7 +110,6 @@ namespace AbstractPizzeriaFileImplement
             }
             return instance;
         }
-
         ~FileDataListSingleton()
         {
             SaveIngredients();

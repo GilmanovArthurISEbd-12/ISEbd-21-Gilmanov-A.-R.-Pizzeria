@@ -15,14 +15,12 @@ namespace AbstractPizzeriaFileImplement.Implements
         {
             source = FileDataListSingleton.GetInstance();
         }
-
         public List<PizzaViewModel> GetFullList()
         {
             return source.Pizzas
             .Select(CreateModel)
             .ToList();
         }
-
         public List<PizzaViewModel> GetFilteredList(PizzaBindingModel model)
         {
             if (model == null)
@@ -34,7 +32,6 @@ namespace AbstractPizzeriaFileImplement.Implements
             .Select(CreateModel)
             .ToList();
         }
-
         public PizzaViewModel GetElement(PizzaBindingModel model)
         {
             if (model == null)
@@ -46,7 +43,6 @@ namespace AbstractPizzeriaFileImplement.Implements
            == model.Id);
             return pizza != null ? CreateModel(pizza) : null;
         }
-
         public void Insert(PizzaBindingModel model)
         {
             int maxId = source.Pizzas.Count > 0 ? source.Ingredients.Max(rec => rec.Id)
@@ -64,11 +60,10 @@ namespace AbstractPizzeriaFileImplement.Implements
             var element = source.Pizzas.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
-                throw new Exception("Element did not found");
+                throw new Exception("Элемент не найден");
             }
             CreateModel(model, element);
         }
-
         public void Delete(PizzaBindingModel model)
         {
             Pizza element = source.Pizzas.FirstOrDefault(rec => rec.Id == model.Id);
@@ -78,10 +73,9 @@ namespace AbstractPizzeriaFileImplement.Implements
             }
             else
             {
-                throw new Exception("Element did not found");
+                throw new Exception("Элемент не найден");
             }
         }
-
         private Pizza CreateModel(PizzaBindingModel model, Pizza pizza)
         {
             pizza.PizzaName = model.PizzaName;
@@ -110,10 +104,10 @@ namespace AbstractPizzeriaFileImplement.Implements
             }
             return pizza;
         }
-
         private PizzaViewModel CreateModel(Pizza pizza)
         {
             return new PizzaViewModel
+
             {
                 Id = pizza.Id,
                 PizzaName = pizza.PizzaName,
@@ -123,6 +117,6 @@ namespace AbstractPizzeriaFileImplement.Implements
                     (source.Ingredients.FirstOrDefault(recC => recC.Id ==
                     recPC.Key)?.IngredientName, recPC.Value))
             };
-        }
+        }
     }
 }

@@ -26,7 +26,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
             }
             return _orderStorage.GetFilteredList(model);
         }
-
         public void CreateOrder(CreateOrderBindingModel model)
         {
             _orderStorage.Insert(new OrderBindingModel
@@ -38,7 +37,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
                 Status = OrderStatus.Принят
             });
         }
-
         public void TakeOrderInWork(ChangeStatusBindingModel model)
         {
             var order = _orderStorage.GetElement(new OrderBindingModel
@@ -64,7 +62,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
                 Status = OrderStatus.Выполняется
             });
         }
-
         public void FinishOrder(ChangeStatusBindingModel model)
         {
             var order = _orderStorage.GetElement(new OrderBindingModel
@@ -91,7 +88,6 @@ namespace AbstractPizzeriaBusinessLogic.BusinessLogic
                 Status = OrderStatus.Готов
             });
         }
-
         public void PayOrder(ChangeStatusBindingModel model)
         {
             var order = _orderStorage.GetElement(new OrderBindingModel { Id = model.OrderId });
