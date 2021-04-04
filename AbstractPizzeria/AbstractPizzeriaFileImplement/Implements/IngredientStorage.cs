@@ -56,7 +56,7 @@ namespace AbstractPizzeriaFileImplement.Implements
             var element = source.Ingredients.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
-                throw new Exception("Элемент не найден");
+                throw new Exception("Element did not find");
             }
             CreateModel(model, element);
         }
@@ -70,7 +70,7 @@ namespace AbstractPizzeriaFileImplement.Implements
             }
             else
             {
-                throw new Exception("Элемент не найден");
+                throw new Exception("Element did not find");
             }
         }
         private Ingredient CreateModel(IngredientBindingModel model, Ingredient ingredient)
@@ -87,4 +87,5 @@ namespace AbstractPizzeriaFileImplement.Implements
             };
         }
     }
-}
+}
+
