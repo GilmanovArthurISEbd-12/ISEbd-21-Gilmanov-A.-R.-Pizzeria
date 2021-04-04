@@ -89,7 +89,7 @@ namespace AbstractPizzeriaListImplement.Implements
             }
             if (tempOrder == null)
             {
-                throw new Exception("Элемент не найден");
+                throw new Exception("Element did not find");
             }
             CreateModel(model, tempOrder);
         }
@@ -104,7 +104,7 @@ namespace AbstractPizzeriaListImplement.Implements
                     return;
                 }
             }
-            throw new Exception("Элемент не найден");
+            throw new Exception("Element did not find");
         }
 
         private Order CreateModel(OrderBindingModel model, Order order)
