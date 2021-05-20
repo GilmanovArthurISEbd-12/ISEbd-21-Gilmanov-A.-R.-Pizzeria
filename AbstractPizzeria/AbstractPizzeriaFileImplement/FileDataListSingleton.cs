@@ -12,7 +12,6 @@ namespace AbstractPizzeriaFileImplement
     public class FileDataListSingleton
     {
         private static FileDataListSingleton instance;
-
         private readonly string IngredientFileName = "Ingredient.xml";
         private readonly string OrderFileName = "Order.xml";
         private readonly string PizzaFileName = "Pizza.xml";
